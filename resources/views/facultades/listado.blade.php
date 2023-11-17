@@ -34,7 +34,7 @@
                                     <td>{{ $f->codfacultad }}</td>
                                     <td>{{ $f->nomfacultad }}</td>
                                     <td>
-                                        <button href="#" class="btn btn-primary"><i class="fas fa-edit"></i> </button>
+                                        <button href="{{route ('editar_facultad',$f->codfacultad)}" class="btn btn-primary"><i class="fas fa-edit"></i> </button>
                                         <button href="{{route ('eliminar_facultad',$f->codfacultad)}}" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                     </td>
                                 </tr>

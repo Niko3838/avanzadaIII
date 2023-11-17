@@ -39,6 +39,9 @@ Route::get('/facultades/registrar', [Facultades::class, 'form_registro']
 Route::post('/facultades/registrar', [Facultades::class, 'registrar']
 )->middleware(['auth', 'verified'])->name('registrar_facultad');
 
+Route::get('/facultades/editar/{$id}',[Facultades::class, 'form_edicion']
+)->middleware(['auth', 'verified'])->name('editar_facultad');
+
 //Ruta eliminar
 Route::get('/facultades/eliminar/{id}', [Facultades::class, 'eliminar'] //recibe parametro
 )->middleware(['auth', 'verified'])->name('eliminar_facultad');

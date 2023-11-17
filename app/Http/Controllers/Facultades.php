@@ -35,4 +35,9 @@ class Facultades extends Controller
         return redirect()->route('facultades_listado');
         
     }
+
+    public function form_edicion($id){
+        $facultad = Faculty::findorFail($id);
+        return view ('facultades.form_edicion',['faculty' => $facultad]);
+    }
 }
