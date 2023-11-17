@@ -40,4 +40,11 @@ class Facultades extends Controller
         $facultad = Faculty::findorFail($id);
         return view ('facultades.form_edicion',['faculty' => $facultad]);
     }
+
+    public function editar(Request $request, $id){
+        $facultad = Faculty::findOrfail($id);
+        $facultad -> nomfacultad= $request-> input('nom_facultad');
+        $facultad -> save();
+        return redirect()->route('facultades_listado');
+    }
 }

@@ -15,7 +15,7 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form class="form-horizontal" action="{{url('/facultades/registrar')}}" method="POST">
+                <form class="form-horizontal" action="{{url('/facultades/editar')}}" method="POST">
                     @csrf
                     <div class="card-body">
                         <div class="form-group row">
